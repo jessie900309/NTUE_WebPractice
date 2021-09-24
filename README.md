@@ -24,5 +24,4 @@
 
 | 簡易小算盤 Demo |
 |:--------:|
-|   ![](https://i.imgur.com/SFukELs.png)
-   |
+| ![](https://i.imgur.com/SFukELs.png) |
