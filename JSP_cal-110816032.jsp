@@ -3,43 +3,43 @@
 <HEAD>
 <TITLE>cal-110816032</TITLE>
 <!--
-	©m¦W:ÁÂ§±ÔÐ
-    ¾Ç¸¹:110816032
-    ¾Þ§@»¡©ú:
-        1. ·í¦¨¤@¯ë«öÁä¦¡­pºâ¾÷¨Ï¥Î¿é¤J¼Æ¦r(²Ä¤@­Ó¹Bºâ¤¸)
-        2. ­Y¼Æ¦r¬°0 «ö¤U´î¸¹·|§@¬°­t¸¹
-        3. «ö¤U¹Bºâ¤l
-        4. ¿é¤J²Ä¤G­Ó¹Bºâ¤¸
-        5. «ö¤U³Ì¤U¤èªºµ¥¸¹(¦pªG³o®É­Ô«ö¤U¹Bºâ¤l¡A²Ä¤G­Ó¹Bºâ¤¸±N¨ú¥N²Ä¤@­Ó¹Bºâ¤¸)
-        6. ·PÁÂ±zªº¨Ï¥Î(¤p¼ÆÂI«á¥|±Ë¤­¤J¨ú¨ì²Ä6¦ì)
-   ¦Ûµû¤À¼Æ:
-        «öµû¤À¼Ð·Ç100¤À°Õ
-        ¤ä´©­t¸¹¡B¤p¼ÆÂI¹Bºâ
-        ¦³°µ¾ú¥v¬ö¿ý ¸ò ¤£¥Î¯S§O«ö²M°£´N¥i¥H°µ¤U¤@½ü¹Bºâ
-        «ô°U¥[¤À¥[Ãz°ÕQuQQQQQ
+	å§“å:è¬å¦¤å©•
+    å­¸è™Ÿ:110816032
+    æ“ä½œèªªæ˜Ž:
+        1. ç•¶æˆä¸€èˆ¬æŒ‰éµå¼è¨ˆç®—æ©Ÿä½¿ç”¨è¼¸å…¥æ•¸å­—(ç¬¬ä¸€å€‹é‹ç®—å…ƒ)
+        2. è‹¥æ•¸å­—ç‚º0 æŒ‰ä¸‹æ¸›è™Ÿæœƒä½œç‚ºè² è™Ÿ
+        3. æŒ‰ä¸‹é‹ç®—å­
+        4. è¼¸å…¥ç¬¬äºŒå€‹é‹ç®—å…ƒ
+        5. æŒ‰ä¸‹æœ€ä¸‹æ–¹çš„ç­‰è™Ÿ(å¦‚æžœé€™æ™‚å€™æŒ‰ä¸‹é‹ç®—å­ï¼Œç¬¬äºŒå€‹é‹ç®—å…ƒå°‡å–ä»£ç¬¬ä¸€å€‹é‹ç®—å…ƒ)
+        6. æ„Ÿè¬æ‚¨çš„ä½¿ç”¨(å°æ•¸é»žå¾Œå››æ¨äº”å…¥å–åˆ°ç¬¬6ä½)
+   è‡ªè©•åˆ†æ•¸:
+        æŒ‰è©•åˆ†æ¨™æº–100åˆ†å•¦
+        æ”¯æ´è² è™Ÿã€å°æ•¸é»žé‹ç®—
+        æœ‰åšæ­·å²ç´€éŒ„ è·Ÿ ä¸ç”¨ç‰¹åˆ¥æŒ‰æ¸…é™¤å°±å¯ä»¥åšä¸‹ä¸€è¼ªé‹ç®—
+        æ‹œè¨—åŠ åˆ†åŠ çˆ†å•¦QuQQQQQ
 -->
 </HEAD>
 <BODY style="background-color:#FFECF5;">
 
 
-<!--«Å§iÅÜ¼Æ¨ç¦¡-->
+<!--å®£å‘Šè®Šæ•¸å‡½å¼-->
 <%!
-	boolean hasUsed = false;//¤W¤@½üµ²ªG¬O§_¦s¦b
-	double Lastresult = 0;//¤W¤@½üªºµª®×
-	String LastCal = "";//¤W¤@½üªººâ¦¡¥»Åé
-	String LastOpr = "";//¤W¤@½üªº¹Bºâ¤l
+	boolean hasUsed = false;//ä¸Šä¸€è¼ªçµæžœæ˜¯å¦å­˜åœ¨
+	double Lastresult = 0;//ä¸Šä¸€è¼ªçš„ç­”æ¡ˆ
+	String LastCal = "";//ä¸Šä¸€è¼ªçš„ç®—å¼æœ¬é«”
+	String LastOpr = "";//ä¸Šä¸€è¼ªçš„é‹ç®—å­
 	
-	double Number1 = 0;//¹Bºâ¤¸1
-	double Number2 = 0;//¹Bºâ¤¸2
-	int funct = 0;  //¹Bºâ¤l(1(add)¡B2(subtract)¡B3(multiply)¡B4(divide))
+	double Number1 = 0;//é‹ç®—å…ƒ1
+	double Number2 = 0;//é‹ç®—å…ƒ2
+	int funct = 0;  //é‹ç®—å­(1(add)ã€2(subtract)ã€3(multiply)ã€4(divide))
 	
-	boolean floatUsed = false;//¬O§_¥Î¨ì¤p¼ÆÂI
-	int floatCount = 1;//¤p¼ÆÂI«á²Ä´X¦ì
+	boolean floatUsed = false;//æ˜¯å¦ç”¨åˆ°å°æ•¸é»ž
+	int floatCount = 1;//å°æ•¸é»žå¾Œç¬¬å¹¾ä½
 	
-	boolean neNum = false;//¬O§_¥Î¨ì­t¸¹
+	boolean neNum = false;//æ˜¯å¦ç”¨åˆ°è² è™Ÿ
 	
-	double result = 0;  //®æ¤l¤Wªº¼Æ¦r(Åã¥Ü°Ï)
-	//¬ö¿ý·í«e¼Æ¦rÅÜ¤Æ //String btnState ¬O request.getParameter("btn")
+	double result = 0;  //æ ¼å­ä¸Šçš„æ•¸å­—(é¡¯ç¤ºå€)
+	//ç´€éŒ„ç•¶å‰æ•¸å­—è®ŠåŒ– //String btnState æ˜¯ request.getParameter("btn")
 	private void printMath(String btnState){
 		double IntNum = Double.parseDouble(btnState);
 		if(neNum)IntNum = -IntNum;
@@ -55,13 +55,13 @@
     }
 %>
 
-<!--­pºâ(­ì¬°JAVA¨Æ¥óºÊÅ¥)-->
+<!--è¨ˆç®—(åŽŸç‚ºJAVAäº‹ä»¶ç›£è½)-->
 <%
 	if(request.getParameter("btn") != null){
-	//¤£¼g·|³ø¿ùOAO
+	//ä¸å¯«æœƒå ±éŒ¯OAO
 	//NullPointerException
 	
-		if(hasUsed) {//²M°£¤W¤@½ü
+		if(hasUsed) {//æ¸…é™¤ä¸Šä¸€è¼ª
 			switch(funct){
 				case 1:LastOpr = " + "; break;
 	            case 2:LastOpr = " - "; break;
@@ -71,32 +71,32 @@
 			}
 			LastCal = Double.toString(Number1)+LastOpr+Double.toString(Number2)+" = ";
 			Lastresult = result; result = 0;
-			Number1 = Number2 = funct = 0;
+			Number1 = Number2 = 0; funct = 0;
 			floatUsed = false; floatCount = 1;
 			hasUsed = false; neNum = false;
 	    }
 		
 		try{
 			
-			//²M°£¸ê®Æ
+			//æ¸…é™¤è³‡æ–™
 			if(request.getParameter("btn").equals("C")){
 				Number1 = Number2 = funct = result = 0; neNum = false;
 				floatUsed = false; floatCount = 1;
 			}
 			
-			//¹Bºâ¤l«ö¶s->¦s²Ä¤@­Ó¼Æ¦r¤Î¹Bºâ¤¸
+			//é‹ç®—å­æŒ‰éˆ•->å­˜ç¬¬ä¸€å€‹æ•¸å­—åŠé‹ç®—å…ƒ
 			else if(request.getParameter("btn").equals("+")){
 				Number1 = (result); neNum = false;
 				result = 0; floatUsed = false; floatCount = 1;
 				funct = 1;
 			}
 			else if(request.getParameter("btn").equals("-")){
-				//­t¸¹
+				//è² è™Ÿ
 				if(result == 0){
 					neNum = true;
 					result = StrictMath.signum(-0.0f);
 				}
-				//´î¸¹
+				//æ¸›è™Ÿ
 				else{
 					Number1 = (result);
 					result = 0; floatUsed = false; floatCount = 1;
@@ -114,7 +114,7 @@
 				funct = 4;
 			}
 			
-			//µ¥¸¹«ö¶s->¦s²Ä¤G­Ó¼Æ¦r¨Ã­pºâ//¥|±Ë¤­¤J¦Ü¤p¼ÆÂI«á6¦ì
+			//ç­‰è™ŸæŒ‰éˆ•->å­˜ç¬¬äºŒå€‹æ•¸å­—ä¸¦è¨ˆç®—//å››æ¨äº”å…¥è‡³å°æ•¸é»žå¾Œ6ä½
 			else if(request.getParameter("btn").equals("=")){
 				Number2 = (result);
 				switch(funct){
@@ -130,25 +130,25 @@
 		            case 4: 
 		            	result = Math.round((Number1 / Number2) * 1000000.0) / 1000000.0;
 		            	break;
-		            default: /*Ô£³£¤£°µ*/
+		            default: /*å•¥éƒ½ä¸åš*/
 				}
 				hasUsed = true;
 			}
 			
-			//¼Æ¦r³B²z
+			//æ•¸å­—è™•ç†
 			else{
 		        if(floatUsed){
-		        	if(request.getParameter("btn").equals(".")){/*Ô£³£¤£°µ*/}
+		        	if(request.getParameter("btn").equals(".")){/*å•¥éƒ½ä¸åš*/}
 		            else printFloat(request.getParameter("btn"));
 		        }
 		        else {
-		        	//²Ä¤@¦¸«ö¤U¤p¼ÆÂI
+		        	//ç¬¬ä¸€æ¬¡æŒ‰ä¸‹å°æ•¸é»ž
 		        	if(request.getParameter("btn").equals("."))floatUsed = true;
 		            else printMath(request.getParameter("btn"));
 		        }
 			}
 		}
-		//®·®»¨Ò¥~¨ÃÂk¹s
+		//æ•æ‰ä¾‹å¤–ä¸¦æ­¸é›¶
 		catch(NumberFormatException OAO){
 	        result = 0;
 			Number1 = Number2 = funct = 0;
@@ -166,7 +166,7 @@
 	}
 %>
 
-<!--¥D­¶­±³]­p-->
+<!--ä¸»é é¢è¨­è¨ˆ-->
 <br><br>
 <div style= "text-align:center;">
 	<font text-align:center; size="16" color="FFAAD5" style="text-shadow:3px 3px 3px #cccccc;" face="monospace">
@@ -176,7 +176,7 @@
 	</font>
 </div>
 <br>
-<!--¿é¥Xºâ¦¡-->
+<!--è¼¸å‡ºç®—å¼-->
 <center>
 	<font  size="4" color="555555" face="monospace">
 		<%
@@ -188,7 +188,7 @@
 		            case 2:out.print("-");break;
 		            case 3:out.print("*");break;
 		            case 4:out.print("/");break;
-		            default: /*Ô£³£¤£°µ*/
+		            default: /*å•¥éƒ½ä¸åš*/
 				}
 			}
 			out.print(" "); 
@@ -200,16 +200,16 @@
 <form action="cal-110816032.jsp" method="post" name="form1">
 <table align="center" bgcolor="FFECEC" border="3">
 	<tr>
-		<td><!--­pºâ¾÷³]­p-->
+		<td><!--è¨ˆç®—æ©Ÿè¨­è¨ˆ-->
 			<table align="center" bgcolor="FFECEC" border="3">
-			   <tr><!--Åã¥Ü·í«e¼Æ¦r-->
+			   <tr><!--é¡¯ç¤ºç•¶å‰æ•¸å­—-->
 				 <td align='right' valign="middle" colspan="4" style= "height:40px">
 				 	<font  size="6" color="555555" face="monospace">
 				 		<%= result %>
 				 	</font>
 				 </td>
 			   </tr>
-			   <tr><!--«öÁä°Ï°ì789+-->
+			   <tr><!--æŒ‰éµå€åŸŸ789+-->
 			     <td align='center' valign="middle">
 			     	<input style= "background-color:#FFECF5;height:50px;width:50px;"
 				 		   type="submit" name="btn" value="7" >
@@ -227,7 +227,7 @@
 				 		   type="submit" name="btn" value="+" >
 			     </td>
 			   </tr>
-			   <tr><!--«öÁä°Ï°ì456--->
+			   <tr><!--æŒ‰éµå€åŸŸ456--->
 			     <td align='center' valign="middle">
 			     	<input style= "background-color:#FFD9EC;height:50px;width:50px;"
 				 		   type="submit" name="btn" value="4" >
@@ -245,7 +245,7 @@
 				 		   type="submit" name="btn" value="-" >
 			     </td>
 			   </tr>
-			   <tr><!--«öÁä°Ï°ì123*-->
+			   <tr><!--æŒ‰éµå€åŸŸ123*-->
 			     <td align='center' valign="middle">
 			     	<input style= "background-color:#FFC1E0;height:50px;width:50px;"
 				 		   type="submit" name="btn" value="1" >
@@ -263,7 +263,7 @@
 				 		   type="submit" name="btn" value="*" >
 			     </td>
 			   </tr>
-			   <tr><!--«öÁä°Ï°ìC0./-->
+			   <tr><!--æŒ‰éµå€åŸŸC0./-->
 			     <td align='center' valign="middle">
 			     	<input style= "background-color:#FFAAD5;height:50px;width:50px;"
 				 		   type="submit" name="btn" value="C" >
@@ -289,7 +289,7 @@
 			   </tr>
 			</table>
 		</td>
-		<td><!--¤W¤@½ü¬ö¿ý-->
+		<td><!--ä¸Šä¸€è¼ªç´€éŒ„-->
 			<table bgcolor="FFECEC" border="3">
 			   <tr>
 				 <td align='center' valign="middle" style= "height:40px;width:220px;">
