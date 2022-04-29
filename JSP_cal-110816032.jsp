@@ -80,8 +80,8 @@
 			
 			//清除資料
 			if(request.getParameter("btn").equals("C")){
-				Number1 = Number2 = funct = result = 0; neNum = false;
-				floatUsed = false; floatCount = 1;
+				Number1 = Number2 = 0; funct = 0; result = 0; 
+				neNum = false;floatUsed = false; floatCount = 1;
 			}
 			
 			//運算子按鈕->存第一個數字及運算元
